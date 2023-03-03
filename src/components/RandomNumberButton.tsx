@@ -12,7 +12,7 @@ const RandomNumberButton = () => {
     },50);
     setTimeout(() => {
         clearInterval(interval);
-    }, 2000);
+    }, 500);
   };
 
   return (
