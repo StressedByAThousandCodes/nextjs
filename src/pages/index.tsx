@@ -10,7 +10,7 @@ export default function Home() {
         <title>Randomize</title>
       </Head>
       <main className={styles.main}>
-      <p className={styles.text}>Find out your lucky number from 1-100!</p>
+        <p className={styles.text}>Find out your lucky number from 1-100!</p>
         <div className={styles.description}>
           <RandomNumberButton />
         </div>
