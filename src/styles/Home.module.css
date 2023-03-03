@@ -9,16 +9,31 @@
   color: black;
 }
 .button {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
   width: fit-content;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  padding: 10%;
+  font-family: var(--font-mono);
+  padding: 1rem;
+  background-color: aliceblue;
+  color: black;
+}
+
+.text {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 3rem;
+  background-color: aliceblue;
+  color: black;
 }
 
 .description {
-  display: inherit;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
@@ -26,9 +41,9 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
-  height: min-content;
-  border: solid;
-  border-color: black;
+  /* border: solid;
+  border-color: black; */
+  margin: 1rem;
 }
 
 .description a {

@@ -16,9 +16,13 @@ const RandomNumberButton = () => {
   };
 
   return (
-    <div className={styles.main}>
-      {randomNumber}
-      <button onClick={generateRandomNumber} className={styles.button}>Generate Random Number</button>
+    <div className={styles.description}>
+      <div className={styles.description}>
+        {randomNumber}
+      </div>
+      <div className={styles.button}>
+        <button onClick={generateRandomNumber} className={styles.button}>Generate Lucky Number</button>
+      </div>
     </div>
   );
 };
