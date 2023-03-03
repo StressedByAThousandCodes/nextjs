@@ -3,16 +3,18 @@ import styles from '@/styles/Home.module.css'
 
 
 const RandomNumberButton = () => {
+
   const [randomNumber, setRandomNumber] = useState(0);
   const [audio] = useState(new Audio('./drum-roll-please-6921.mp3'));
 
   const generateRandomNumber = () => {
+    audio.play();
     const interval = setInterval(() => {
       const newRandomNumber = Math.floor(Math.random() * 100) + 1;
-      audio.play();
+      
       setRandomNumber(newRandomNumber);
-    },50);
-    
+    }, 50);
+
     setTimeout(() => {
       clearInterval(interval);
     }, 5000);
