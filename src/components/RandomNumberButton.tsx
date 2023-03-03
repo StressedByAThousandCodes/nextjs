@@ -5,15 +5,19 @@ import styles from '@/styles/Home.module.css'
 const RandomNumberButton = () => {
 
   const [randomNumber, setRandomNumber] = useState(0);
+
   const musicPlayers = useRef<HTMLAudioElement | undefined>(
     typeof Audio !== "undefined" ? new Audio('./drum-roll-please-6921.mp3') : undefined
   );
 
   const generateRandomNumber = () => {
-    
+    musicPlayers.current?.pause();
+    musicPlayers.current?.remove();
+    musicPlayers.current = new Audio('./drum-roll-please-6921.mp3');
+    musicPlayers.current?.play();
     const interval = setInterval(() => {
       const newRandomNumber = Math.floor(Math.random() * 100) + 1;
-      musicPlayers.current?.play();
+      
       setRandomNumber(newRandomNumber);
     }, 50);
 
